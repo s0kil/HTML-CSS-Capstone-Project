@@ -1,0 +1,101 @@
+:root {
+  --theme-colors-red: #d45749;
+  --theme-colors-white: #ffffff;
+
+  --theme-fonts-lato: "Lato", sans-serif;
+}
+
+/* Responsive Sizes:
+- mobile: <= 768px
+- tablet: > 768px && < 1024px
+- desktop: >= 1024px
+*/
+
+nav {
+  display: flex;
+  padding: 1rem 4rem;
+  justify-content: space-between;
+  color: var(--theme-colors-white);
+  background-color: var(--theme-colors-red);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: flex-start;
+}
+
+.nav-brand h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--theme-fonts-lato);
+}
+
+.nav-logo {
+  margin-right: 0.4rem;
+}
+
+.nav-logo img {
+  height: 40px;
+}
+
+.nav-actions {
+  display: flex;
+}
+
+.nav-actions ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.nav-actions ul li a {
+  margin-left: 0.2rem;
+  text-decoration: none;
+  color: var(--theme-colors-white);
+  font-family: var(--theme-fonts-lato);
+}
+
+.nav-actions ul li a:hover {
+  text-decoration: underline;
+}
+
+.nav-action {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.nav-action a {
+  text-transform: uppercase;
+}
+
+.nav-action ion-icon {
+  font-size: 22px;
+  color: var(--theme-colors-white);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0.8rem 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-brand {
+    justify-content: center;
+    margin-bottom: 0.8rem;
+  }
+  .nav-actions {
+    display: initial;
+  }
+  .nav-actions ul {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-action a {
+    display: none;
+  }
+}
