@@ -7,7 +7,7 @@
     "prebuild": "npm run clean",
     "postbuild": "npm run generateNetlifyHeaders",
     "clean": "echo \"require('fs').rmdirSync('dist', { recursive: true })\" | node",
-    "generateNetlifyHeaders": "./utilities/generate_server_push_headers.sh.sh",
+    "generateNetlifyHeaders": "./utilities/generate_server_push_headers.sh",
     "serve": "sirv start dist/ --single --port 1234"
   },
   "devDependencies": {
