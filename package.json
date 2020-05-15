@@ -16,8 +16,8 @@
     "@webcomponents/webcomponentsjs": "^2.4.3",
     "hybrids": "^4.1.9",
     "instant.page": "^3.0.0",
+    "modern-normalize": "^0.6.0",
     "parcel": "^2.0.0-nightly.270",
-    "sirv-cli": "^0.4.5",
-    "tailwindcss": "^1.4.6"
+    "sirv-cli": "^0.4.5"
   }
 }

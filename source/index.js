@@ -6,7 +6,8 @@ window.addEventListener("load", () => {
 // Enable HMR for development
 if (process.env.NODE_ENV !== "production") module.hot.accept();
 
-// Global Styles
+// Styles
+import "modern-normalize";
 import "./index.css";
 
 // Add conditional shims and polyfills
