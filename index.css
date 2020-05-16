@@ -1,16 +1,17 @@
 :root {
   --theme-colors-red: #d45749;
   --theme-colors-white: #ffffff;
-
   --theme-fonts-lato: "Lato", sans-serif;
+
+  --nav-height: 105px;
+  --header-radius: 0.2rem;
 }
 
-/* Responsive Sizes:
-- mobile: <= 768px
-- tablet: > 768px && < 1024px
-- desktop: >= 1024px
-*/
-
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
 nav {
   display: flex;
   padding: 1rem 4rem;
@@ -18,31 +19,26 @@ nav {
   color: var(--theme-colors-white);
   background-color: var(--theme-colors-red);
 }
-
 .nav-brand {
   display: flex;
   align-items: flex-start;
 }
-
-.nav-brand h1 {
-  line-height: 1;
+.nav-brand p {
   margin: 0;
+  line-height: 1;
+  display: block;
   font-size: 1.6rem;
   font-family: var(--theme-fonts-lato);
 }
-
 .nav-logo {
   margin-right: 0.4rem;
 }
-
 .nav-logo img {
   height: 40px;
 }
-
 .nav-actions {
   display: flex;
 }
-
 .nav-actions ul {
   margin: 0;
   padding: 0;
@@ -50,33 +46,80 @@ nav {
 
   display: flex;
 }
-
 .nav-actions ul li a {
   margin-left: 0.2rem;
   text-decoration: none;
   color: var(--theme-colors-white);
   font-family: var(--theme-fonts-lato);
 }
-
 .nav-actions ul li a:hover {
   text-decoration: underline;
 }
-
 .nav-action {
   display: flex;
   align-items: center;
   margin-left: 1rem;
 }
-
 .nav-action a {
   text-transform: uppercase;
 }
-
 .nav-action ion-icon {
   font-size: 22px;
   color: var(--theme-colors-white);
 }
+header {
+  background-size: cover;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  background-image: url("assets/header.jpg");
+}
+.header-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.header-center h1 {
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px #482311;
+  color: var(--theme-colors-white);
+  font-family: var(--theme-fonts-lato);
+}
+.header-center div {
+  border-radius: var(--header-radius);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.header-center div form {
+  display: flex;
+  flex-direction: column;
+}
+.header-center div form label,
+.header-center div form input {
+  margin-bottom: 0.4rem;
+}
+.header-center div form label,
+.header-center div form input,
+.header-center div form button {
+  border-radius: var(--header-radius);
+}
+.header-center div form input {
+  outline: none;
+  padding: 0.6rem;
+  border: 1px solid var(--theme-colors-red);
+}
+.header-center div form button {
+  border: none;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  color: var(--theme-colors-white);
+  background-color: var(--theme-colors-red);
+}
 
+/*! Mobile: <= 768px */
 @media screen and (max-width: 768px) {
   nav {
     padding: 0.8rem 0;
@@ -93,9 +136,55 @@ nav {
   .nav-actions ul {
     justify-content: space-around;
   }
-}
-@media screen and (max-width: 1024px) {
+  .nav-action {
+    margin-left: 0rem;
+  }
   .nav-action a {
     display: none;
+  }
+  header {
+    height: calc(100vh - var(--nav-height));
+  }
+  .header-center {
+    padding: 0 1rem;
+  }
+  .header-center div {
+    padding: 1rem 0.4rem;
+    margin-bottom: var(--nav-height);
+  }
+  section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/*! Tablet: > 768px && < 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    background-position: top;
+    height: calc(70vh - var(--nav-height));
+  }
+  .header-center {
+    justify-content: flex-end;
+    padding: calc(var(--nav-height) / 4) 0;
+  }
+  .header-center div {
+    padding: 1rem;
+  }
+  section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/*! Desktop: >= 1024px */
+@media screen and (min-width: 1024px) {
+  header {
+    height: calc(80vh - var(--nav-height));
+  }
+  .header-center div {
+    padding: 2rem;
   }
 }
