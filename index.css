@@ -1,5 +1,5 @@
 :root {
-  --theme-colors-red: #d45749;
+  --theme-colors-red: #ce4231;
   --theme-colors-white: #ffffff;
   --theme-fonts-lato: "Lato", sans-serif;
 
@@ -71,7 +71,12 @@ header {
   background-size: cover;
   background-position: 40%;
   background-repeat: no-repeat;
-  background-image: url("assets/header.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("assets/header.jpg");
 }
 .header-center {
   width: 100%;
@@ -85,7 +90,7 @@ header {
 .header-center h1 {
   font-weight: 700;
   text-align: center;
-  text-shadow: 2px 2px #482311;
+  text-shadow: 2px 2px #372f23;
   color: var(--theme-colors-white);
   font-family: var(--theme-fonts-lato);
 }
