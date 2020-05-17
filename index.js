@@ -25,27 +25,10 @@
     "Maranda High",
   ];
 
-  const inputPlaceholderTypingEffect = (inputElement, futurePlaceholder) => {
-    inputElement.placeholder = 'e.g. "';
-    const characters = futurePlaceholder.split("");
-    const typingInterval = setInterval(() => {
-      if (!characters.length) {
-        inputElement.placeholder = inputElement.placeholder + '"';
-        clearInterval(typingInterval);
-        return;
-      } else {
-        inputElement.placeholder =
-          inputElement.placeholder + characters.shift();
-      }
-    }, 100);
-  };
-
-  setTimeout(() => {
-    const schoolSearch = document.getElementById("school-search");
-    const randomSchool =
-      Kenya_Popular_Schools[
-        Math.floor(Math.random() * Kenya_Popular_Schools.length)
-      ];
-    inputPlaceholderTypingEffect(schoolSearch, randomSchool);
-  }, 1000);
+  PlaceholderTypingEffect({
+    element: document.getElementById("school-search"),
+    strings: Kenya_Popular_Schools,
+    prepend: 'e.g. "',
+    append: '"',
+  }).begin({ delay: 1000 });
 })();
