@@ -1,0 +1,138 @@
+<header>
+  <div class="header-center">
+    <section>
+      <h1>pata shule... your gateway to schools in kenya.</h1>
+      <div>
+        <form>
+          <label for="school-search">find your school:</label>
+          <input id="school-search" name="school-search" type="search" />
+          <button type="submit">search</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</header>
+
+<section class="product-description">
+  <h2>pata shule works in four simple steps.</h2>
+  <div class="product-description-wrapper">
+    <div class="product-description-step">
+      <div class="product-description-icon">
+        <img src="assets/icons/1.svg" alt="Icon" />
+      </div>
+      <h3>search</h3>
+      <p>
+        It's simple. On pata shule homepage, enter the name of the school you
+        are looking for and click on search. Alternatively,
+        <a href="/schools">click here to view a list of all schools</a>
+      </p>
+    </div>
+    <div class="product-description-step">
+      <div class="product-description-icon">
+        <img src="assets/icons/2.svg" alt="Icon" />
+      </div>
+      <h3>locate</h3>
+      <p>
+        Get to see where the school is located by clicking on the school
+        profile. It's even more exciting, you can get directions from anywhere
+        in the country.
+      </p>
+    </div>
+    <div class="product-description-step">
+      <div class="product-description-icon">
+        <img src="assets/icons/3.svg" alt="Icon" />
+      </div>
+      <h3>apply</h3>
+      <p>
+        Apply for your childs's interview to the school of your choice. Click on
+        the APPLY button to get the application form. We also follow up on the
+        application form to make sure you get a reply on time.
+      </p>
+    </div>
+    <div class="product-description-step">
+      <div class="product-description-icon">
+        <img src="assets/icons/4.svg" alt="Icon" />
+      </div>
+      <h3>relax</h3>
+      <p>
+        Once your child gets admitted, You can now relax. Also, check out our
+        blog to see what we recommend when school hunting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="product-carousels">
+  <div class="product-carousel" style="background-color: #ce4231;">
+    <div class="product-carousel-details">
+      <h4>Over 10,000 schools registered with us</h4>
+      <p>Find our school by using our filtered search engine</p>
+    </div>
+    <img
+      alt="Africa Map"
+      class="product-carousel-image"
+      src="https://i.pinimg.com/originals/b6/24/b5/b624b5ad4a664bb73c8b49c277522829.jpg"
+    />
+  </div>
+  <div class="product-carousel" style="background-color: #838a81;">
+    <div class="product-carousel-details">
+      <h4>No need to take 3 Matatus to find a school in the country</h4>
+      <p>It's as simple as pressing a search button</p>
+    </div>
+    <img
+      alt="Matatu"
+      class="product-carousel-image"
+      src="https://businesstoday.co.ke/wp-content/uploads/2019/10/Matatu-chaos_Whisper-Eye.jpg"
+    />
+  </div>
+  <div class="product-carousel" style="background-color: #3f6a87;">
+    <div class="product-carousel-details">
+      <h4>Anytime, Anywhere, Any way!</h4>
+      <p>
+        Very convenient platforms that cut across any device including our
+        mobile ready web app and our mobile app coming soon to your app store
+      </p>
+    </div>
+    <img
+      alt="App Store Icons"
+      class="product-carousel-image"
+      src="https://cdn.dribbble.com/users/149739/screenshots/1231942/appstorebtns.png"
+    />
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/gh/s0kil/inputyper@6e03fc2fe660bf1c75fc70eb320c0f6dd77ed61e/index.js"></script>
+<script>
+  const Kenya_Popular_Schools = [
+    "Banda School",
+    "Braeburn School Nairobi",
+    "Greensteds International School",
+    "Hillcrest International Schools",
+    "International School of Kenya",
+    "Kenton College Preparatory School",
+    "Pembroke House",
+    "Peponi House Preparatory School",
+    "Pangani Girls High School",
+    "Alliance Girls",
+    "Mangu High",
+    "Alliance High",
+    "Maseno School",
+    "Kapsabet Boys",
+    "Limuru Girls",
+    "Moi Girls Eldoret",
+    "Lenana School",
+    "MaryHill High School",
+    "Nairobi School",
+    "Nakuru Girls",
+    "Kenya High",
+    "Starehe Boys",
+    "Maranda High",
+  ];
+
+  PlaceholderTypingEffect({
+    element: document.getElementById("school-search"),
+    strings: Kenya_Popular_Schools,
+    prepend: 'e.g. "',
+    append: '"',
+  }).begin({ delay: 1000 });
+</script>

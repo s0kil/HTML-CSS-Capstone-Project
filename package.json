@@ -2,7 +2,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "sirv start ./ --dev --port 1234"
+    "start": "sirv start ./source/ --dev --single --port 1234"
   },
   "devDependencies": {
     "sirv-cli": "^0.4.5"

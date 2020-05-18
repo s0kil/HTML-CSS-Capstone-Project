@@ -15,7 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="./index.css" />
 
     <script
       type="module"
@@ -26,22 +27,18 @@
       src="https://cdn.jsdelivr.net/npm/ionicons@5.0.1/dist/ionicons/ionicons.js"
     ></script>
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/gh/s0kil/inputyper@258056e53f1c17236e7a6f1d222cb66105f25c93/index.min.js"
-    ></script>
-    <script defer src="./index.js"></script>
+    <script src="./index.js"></script>
 
     <title>patashule</title>
   </head>
 
   <body>
-    <nav>
+    <nav class="nav-header">
       <div class="nav-brand">
         <div class="nav-logo">
           <img src="assets/brand-icon-white.png" alt="Brand Logo" />
         </div>
-        <p>patashule</p>
+        <a href="/">patashule</a>
       </div>
       <div class="nav-actions">
         <ul>
@@ -65,19 +62,50 @@
       </div>
     </nav>
 
-    <header>
-      <div class="header-center">
-        <section>
-          <h1>pata shule... your gateway to schools in kenya.</h1>
-          <div>
-            <form action="">
-              <label for="school-search">find your school:</label>
-              <input id="school-search" name="school-search" type="search" />
-              <button type="submit">search</button>
-            </form>
-          </div>
-        </section>
-      </div>
-    </header>
+    <main id="main-content"></main>
+
+    <footer>
+      <nav class="nav-footer">
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/about">about us</a></li>
+          <li><a href="/advertise">advertise</a></li>
+          <li class="footer-brand-icon">
+            <a href="/">
+              <img src="assets/brand-icon-white.png" alt="Brand Logo" />
+            </a>
+          </li>
+          <li><a href="">facebook</a></li>
+          <li><a href="">twitter</a></li>
+          <li><a href="">blog</a></li>
+          <li><a href="">google+</a></li>
+        </ul>
+      </nav>
+      <section>
+        <div>
+          <h5>subscribe</h5>
+          <form>
+            <input type="email" placeholder="you@example.com" />
+            <input type="submit" />
+          </form>
+        </div>
+        <div>
+          <h5>contact</h5>
+          <p>
+            Have a question or submission?
+            <a href="mailto:info@patashule.com">info@patashule.com</a>
+          </p>
+        </div>
+        <div>
+          <h5>about</h5>
+          <p>
+            PataShule is an online platform that assists Kenyans to find a
+            suitable school for their children by simply searching by county,
+            school level, curriculum, etc. <a href="/about">Learn more...</a>
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
