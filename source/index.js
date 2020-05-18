@@ -9,9 +9,15 @@
   const route = APPLICATION_ROUTES[requestedPath] || APPLICATION_ROUTES["404"];
   const routeHtml = await fetch(route).then((r) => r.text());
 
-  window.addEventListener("DOMContentLoaded", () => {
+  const renderPage = (html) => {
     // Render Route HTML
     const mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = routeHtml;
-  });
+    mainContent.innerHTML = html;
+  };
+
+  if (/complete|interactive|loaded/.test(document.readyState)) {
+    renderPage(routeHtml);
+  } else {
+    window.addEventListener("DOMContentLoaded", () => renderPage(routeHtml));
+  }
 })();
