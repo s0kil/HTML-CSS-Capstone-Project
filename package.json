@@ -2,21 +2,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve source/index.html",
-    "build": "parcel build source/index.html",
-    "prebuild": "npm run clean",
-    "postbuild": "npm run generateNetlifyHeaders",
-    "clean": "echo \"require('fs').rmdirSync('dist', { recursive: true })\" | node",
-    "generateNetlifyHeaders": "./utilities/generate_server_push_headers.sh",
-    "serve": "sirv start dist/ --single --port 1234"
+    "start": "sirv start ./source/ --dev --single --port 1234"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@webcomponents/webcomponentsjs": "^2.4.3",
-    "hybrids": "^4.1.9",
-    "instant.page": "^3.0.0",
-    "parcel": "^2.0.0-nightly.270",
+    "node-fetch": "^2.6.0",
     "sirv-cli": "^0.4.5"
   }
 }

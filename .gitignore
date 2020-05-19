@@ -1,3 +1,6 @@
+.log
+design
 node_modules
-.parcel-cache
-dist
+source/data/*
+students_scraper
+!source/data/students-formatted.json

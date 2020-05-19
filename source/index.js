@@ -1,23 +1,36 @@
-window.addEventListener("load", () => {
-  // Faster Page Navigation
-  import("instant.page");
-});
+(async () => {
+  const APPLICATION_ROUTES = {
+    "/": {
+      html: "./pages/home.html",
+      script: "./pages/home.js",
+    },
+    "/about": {
+      html: "./pages/about.html",
+    },
+    "404": {
+      html: "./pages/404.html",
+    },
+  };
 
-// Enable HMR for development
-if (process.env.NODE_ENV !== "production") module.hot.accept();
+  const requestedPath = window.location.pathname;
+  const route = APPLICATION_ROUTES[requestedPath] || APPLICATION_ROUTES["404"];
+  const routeHtml = await fetch(route.html).then((r) => r.text());
 
-// Add conditional shims and polyfills
-import "@webcomponents/webcomponentsjs/webcomponents-loader";
+  const renderRouteHtml = (html) => {
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = html;
+  };
 
-// Template ID Based Router
-import "./router";
+  const loadRouteScript = (route) =>
+    route.script ? window.loadjs(route.script) : undefined;
 
-// Components
-import "./components/counter";
-
-// Partials
-import "./partials/navigation";
-
-// Pages
-import "./pages/home";
-import "./pages/about";
+  if (/complete|interactive|loaded/.test(document.readyState)) {
+    renderRouteHtml(routeHtml);
+    loadRouteScript(route);
+  } else {
+    window.addEventListener("DOMContentLoaded", () => {
+      renderRouteHtml(routeHtml);
+      loadRouteScript(route);
+    });
+  }
+})();
