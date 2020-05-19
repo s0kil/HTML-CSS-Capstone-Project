@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="assets/brand-icon-white.png" />
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap"
     />
 
     <link
@@ -30,34 +32,31 @@
     <script src="https://cdn.jsdelivr.net/npm/loadjs@4.2.0/dist/loadjs.min.js"></script>
     <script src="./index.js"></script>
 
-    <title>patashule</title>
+    <link
+      as="fetch"
+      rel="preload"
+      crossorigin="anonymous"
+      href="./data/students-formatted.json"
+    />
+
+    <title>$ dir ./microverse/students/</title>
   </head>
 
   <body>
     <nav class="nav-header">
       <div class="nav-brand">
-        <div class="nav-logo">
-          <img src="assets/brand-icon-white.png" alt="Brand Logo" />
-        </div>
-        <a href="/">patashule</a>
+        <a href="/">
+          <code class="brand-name">
+            <span>$</span>
+            dir ./microverse/students/
+          </code>
+        </a>
       </div>
       <div class="nav-actions">
         <ul>
           <li class="nav-action">
             <ion-icon name="search-outline"></ion-icon>
-            <a href="/schools">Schools</a>
-          </li>
-          <li class="nav-action">
-            <ion-icon name="person-outline"></ion-icon>
-            <a href="/about">About</a>
-          </li>
-          <li class="nav-action">
-            <ion-icon name="logo-rss"></ion-icon>
-            <a href="/blog">Blog</a>
-          </li>
-          <li class="nav-action">
-            <ion-icon name="menu-outline"></ion-icon>
-            <a href="">More...</a>
+            <a href="/students">Students</a>
           </li>
         </ul>
       </div>
@@ -69,21 +68,15 @@
       <nav class="nav-footer">
         <ul>
           <li><a href="/">home</a></li>
-          <li><a href="/search">Search</a></li>
-          <li><a href="/about">about us</a></li>
-          <li><a href="/advertise">advertise</a></li>
           <li class="footer-brand-icon">
             <a href="/">
-              <img src="assets/brand-icon-white.png" alt="Brand Logo" />
+              <img src="assets/brand-icon.png" alt="Brand Logo" />
             </a>
           </li>
-          <li><a href="">facebook</a></li>
-          <li><a href="">twitter</a></li>
-          <li><a href="">blog</a></li>
-          <li><a href="">google+</a></li>
+          <li><a href="/search">Search</a></li>
         </ul>
       </nav>
-      <section>
+      <section style="display: none;">
         <div>
           <h5>subscribe</h5>
           <form>
@@ -95,7 +88,7 @@
           <h5>contact</h5>
           <p>
             Have a question or submission?
-            <a href="mailto:info@patashule.com">info@patashule.com</a>
+            <a href="">info@microverse-students-dir.com</a>
           </p>
         </div>
         <div>

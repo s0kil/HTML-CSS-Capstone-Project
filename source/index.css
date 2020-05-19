@@ -21,7 +21,10 @@ body {
 }
 .nav-brand {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-center; */
+}
+.nav-brand span {
+  color: black;
 }
 .nav-brand a {
   margin: 0;
@@ -32,11 +35,10 @@ body {
   color: var(--theme-colors-white);
   font-family: var(--theme-fonts-lato);
 }
-.nav-logo {
-  margin-right: 0.4rem;
-}
-.nav-logo img {
-  height: 40px;
+.brand-name {
+  line-height: 2;
+  font-size: 1.2rem;
+  font-family: "Inconsolata", monospace;
 }
 .nav-actions {
   display: flex;
@@ -75,10 +77,10 @@ header {
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
     ),
-    url("assets/header.jpg");
+    url("assets/header.png");
 }
 .header-center {
   width: 100%;
@@ -144,7 +146,7 @@ header {
 }
 .product-description-wrapper {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
 .product-description-step {
@@ -330,7 +332,7 @@ footer section h5 {
 @media screen and (max-width: 1024px) {
   .product-description-wrapper {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(1, 1fr);
   }
   .product-carousel {

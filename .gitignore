@@ -1,3 +1,6 @@
-node_modules
-design
 .log
+design
+node_modules
+source/data/*
+students_scraper
+!source/data/students-formatted.json
