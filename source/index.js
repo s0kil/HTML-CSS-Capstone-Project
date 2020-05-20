@@ -4,8 +4,16 @@
       html: "./pages/home.html",
       script: "./pages/home.js",
     },
-    "/about": {
-      html: "./pages/about.html",
+    "/search": {
+      html: "./pages/search.html",
+    },
+    "/ethnicity": {
+      html: "./pages/ethnicity.html",
+      script: "./pages/ethnicity.js",
+    },
+    "/students": {
+      html: "./pages/students.html",
+      script: "./pages/students.js",
     },
     "404": {
       html: "./pages/404.html",
